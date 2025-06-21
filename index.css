@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    row-gap: 100px;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+header {
+    position: relative;
+}
+
+p {
+    font-size: 18px;
+    color: rgb(216, 63, 7);
+    margin-bottom: 4px;
+}
+
+.header-glass {
+    top: 0;
+    left: 50%;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    transform: translateX(-50%) rotate(8deg);
+}
+.title {
+    color: #013f4a;
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    animation: fade-in 2s ease-in-out, color-change 5s infinite alternate, bounce 3s infinite ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: #013f4a;
+    }
+    100% {
+        color: #ffa500;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glass-header-bounce {
+    0%, 100% {
+        transform: translateX(-50%) rotate(8deg) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) rotate(8deg) translateY(-5px);
+    }
+}
+.tip-calculator {
+    width: 400px;
+    padding: 16px;
+    column-gap: 12px;
+    border-radius: 26px;
+    background-color: white;
+}
+
+.section {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    row-gap: 10px;
+    padding: 26px 16px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color:#FFA500;
+}
+
+.bill-input {
+    padding: 8px;
+    display: flex;
+    column-gap: 12px;
+    border-radius: 4px;
+    background-color: #f3f8fa;
+}
+
+.bill-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.tips {
+    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tips button {
+    width: 70px;
+    height: 35px;
+    border: none;
+    font-size: 16px;
+    cursor:alias;
+    color:#01464b;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.tips button:hover {
+    background-color: #FFA500;
+}
+
+#reset-button {
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+#reset-button:active {
+    transform: scale(1.01);
+}
